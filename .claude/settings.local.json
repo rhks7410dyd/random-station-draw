@@ -3,7 +3,9 @@
     "allow": [
       "Bash(npm run build:*)",
       "Bash(git add:*)",
-      "Bash(git commit -m \"$\\(cat <<''EOF''\nfix: add .npmrc to resolve peer dependency conflict in Vercel\n\n- react-custom-roulette requires React 18 but project uses React 19\n- legacy-peer-deps allows installation despite peer dependency mismatch\n\nCo-Authored-By: Claude Sonnet 4.5 <noreply@anthropic.com>\nEOF\n\\)\")"
+      "Bash(git commit -m \"$\\(cat <<''EOF''\nfix: add .npmrc to resolve peer dependency conflict in Vercel\n\n- react-custom-roulette requires React 18 but project uses React 19\n- legacy-peer-deps allows installation despite peer dependency mismatch\n\nCo-Authored-By: Claude Sonnet 4.5 <noreply@anthropic.com>\nEOF\n\\)\")",
+      "Bash(git commit -m \"$\\(cat <<''EOF''\nfeat: add mobile responsive design\n\n- Add responsive CSS for tablets \\(≤768px\\) and mobile \\(≤480px\\)\n- Dynamically adjust wheel size based on screen width \\(280px/380px/500px\\)\n- Adjust slot machine dimensions and font sizes for mobile\n- Update button styles and layout for better mobile UX\n- Improve readability with responsive font sizes\n\nCo-Authored-By: Claude Sonnet 4.5 <noreply@anthropic.com>\nEOF\n\\)\")",
+      "Bash(git commit -m \"$\\(cat <<''EOF''\ndesign: redesign slot machine with clean and unified style\n\n- Remove gaudy gradients and replace with clean white background\n- Unified design for all slot items \\(same font size and style\\)\n- Add bold border frame in center using ::before pseudo-element\n- Simplify color scheme \\(white bg, purple accent\\)\n- Remove unnecessary animations \\(pulse effect\\)\n- Maintain consistent design across all items\n\nCo-Authored-By: Claude Sonnet 4.5 <noreply@anthropic.com>\nEOF\n\\)\")"
     ]
   }
 }
