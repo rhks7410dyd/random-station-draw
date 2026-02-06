@@ -81,3 +81,68 @@
                 inset 0 0 40px rgba(255, 255, 255, 0.3);
   }
 }
+
+/* 태블릿 & 모바일 대응 */
+@media (max-width: 768px) {
+  .slot-machine-single {
+    padding: 30px 20px;
+    margin: 20px auto;
+  }
+
+  .slot-reel-single {
+    width: 320px;
+    height: 380px;
+  }
+
+  .slot-item-single {
+    height: 126px;
+    font-size: 2.2rem;
+  }
+
+  .slot-item-single.active {
+    font-size: 2.8rem;
+  }
+
+  @keyframes slot-spin-single {
+    0% {
+      transform: translateY(0);
+    }
+    100% {
+      transform: translateY(-126px);
+    }
+  }
+}
+
+/* 소형 모바일 대응 */
+@media (max-width: 480px) {
+  .slot-machine-single {
+    padding: 20px 15px;
+    margin: 15px auto;
+    border-radius: 20px;
+  }
+
+  .slot-reel-single {
+    width: 260px;
+    height: 330px;
+    border: 3px solid #ffd700;
+  }
+
+  .slot-item-single {
+    height: 110px;
+    font-size: 1.8rem;
+  }
+
+  .slot-item-single.active {
+    font-size: 2.3rem;
+    transform: scale(1.05);
+  }
+
+  @keyframes slot-spin-single {
+    0% {
+      transform: translateY(0);
+    }
+    100% {
+      transform: translateY(-110px);
+    }
+  }
+}

@@ -238,3 +238,160 @@ header h1 {
   color: #667eea;
   margin-top: 25px;
 }
+
+/* 태블릿 & 모바일 대응 */
+@media (max-width: 768px) {
+  .app {
+    padding: 20px 10px;
+  }
+
+  header h1 {
+    font-size: 2rem;
+  }
+
+  .subtitle {
+    font-size: 1.2rem;
+  }
+
+  .content {
+    padding: 30px 20px;
+    border-radius: 20px;
+  }
+
+  .step h2 {
+    font-size: 1.8rem;
+    margin-bottom: 30px;
+  }
+
+  .selected-line {
+    font-size: 1.2rem;
+    margin-bottom: 25px;
+  }
+
+  .spin-btn {
+    padding: 15px 40px;
+    font-size: 1.2rem;
+  }
+
+  .slot-btn {
+    margin-top: 30px;
+  }
+
+  .result {
+    padding: 25px;
+    margin-top: 30px;
+  }
+
+  .result-text {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+  }
+
+  .button-group {
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+  }
+
+  .next-btn,
+  .reset-btn {
+    padding: 15px 35px;
+    font-size: 1.1rem;
+    width: 100%;
+  }
+
+  .reset-btn.large {
+    padding: 18px 50px;
+    font-size: 1.3rem;
+  }
+
+  .final-message {
+    padding: 30px 20px;
+  }
+
+  .final-message h3 {
+    font-size: 1.6rem;
+    margin-bottom: 25px;
+  }
+
+  .station-result {
+    font-size: 2rem;
+    gap: 15px;
+  }
+
+  .arrow {
+    font-size: 1.8rem;
+  }
+
+  .enjoy-message {
+    font-size: 1.2rem;
+  }
+}
+
+/* 소형 모바일 대응 */
+@media (max-width: 480px) {
+  header h1 {
+    font-size: 1.6rem;
+  }
+
+  .subtitle {
+    font-size: 1rem;
+  }
+
+  .content {
+    padding: 20px 15px;
+  }
+
+  .step h2 {
+    font-size: 1.5rem;
+  }
+
+  .selected-line {
+    font-size: 1.1rem;
+  }
+
+  .spin-btn {
+    padding: 12px 30px;
+    font-size: 1.1rem;
+  }
+
+  .result {
+    padding: 20px;
+  }
+
+  .result-text {
+    font-size: 1.3rem;
+  }
+
+  .next-btn,
+  .reset-btn {
+    padding: 12px 25px;
+    font-size: 1rem;
+  }
+
+  .reset-btn.large {
+    padding: 15px 40px;
+    font-size: 1.2rem;
+  }
+
+  .final-message {
+    padding: 25px 15px;
+  }
+
+  .final-message h3 {
+    font-size: 1.4rem;
+  }
+
+  .station-result {
+    font-size: 1.6rem;
+    gap: 10px;
+  }
+
+  .arrow {
+    font-size: 1.5rem;
+  }
+
+  .enjoy-message {
+    font-size: 1.1rem;
+  }
+}

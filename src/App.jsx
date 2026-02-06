@@ -35,6 +35,7 @@ function App() {
   const [stationList, setStationList] = useState([]);
   const [isSlotSpinning, setIsSlotSpinning] = useState(false);
   const [slotFinished, setSlotFinished] = useState(false);
+  const [wheelSize, setWheelSize] = useState(500);
 
   useEffect(() => {
     const linesList = Object.keys(stationsData);
@@ -47,6 +48,23 @@ function App() {
       }
     }));
     setLineData(wheelData);
+  }, []);
+
+  useEffect(() => {
+    const handleResize = () => {
+      const width = window.innerWidth;
+      if (width <= 480) {
+        setWheelSize(280);
+      } else if (width <= 768) {
+        setWheelSize(380);
+      } else {
+        setWheelSize(500);
+      }
+    };
+
+    handleResize();
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
   }, []);
 
   const handleSpinLine = () => {
@@ -110,14 +128,16 @@ function App() {
                   data={lineData}
                   onStopSpinning={handleLineStopSpinning}
                   outerBorderColor="#ffffff"
-                  outerBorderWidth={5}
+                  outerBorderWidth={wheelSize < 350 ? 3 : 5}
                   innerBorderColor="#ffffff"
-                  innerBorderWidth={5}
+                  innerBorderWidth={wheelSize < 350 ? 3 : 5}
                   radiusLineColor="#ffffff"
-                  radiusLineWidth={2}
-                  fontSize={20}
-                  textDistance={60}
+                  radiusLineWidth={wheelSize < 350 ? 1 : 2}
+                  fontSize={wheelSize < 350 ? 14 : wheelSize < 450 ? 16 : 20}
+                  textDistance={wheelSize < 350 ? 50 : 60}
                   spinDuration={1.2}
+                  width={wheelSize}
+                  height={wheelSize}
                 />
 
                 <button className="spin-btn" onClick={handleSpinLine} disabled={mustSpin}>
