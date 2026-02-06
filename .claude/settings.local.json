@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm run build:*)",
+      "Bash(git add:*)",
+      "Bash(git commit -m \"$\\(cat <<''EOF''\nfix: add .npmrc to resolve peer dependency conflict in Vercel\n\n- react-custom-roulette requires React 18 but project uses React 19\n- legacy-peer-deps allows installation despite peer dependency mismatch\n\nCo-Authored-By: Claude Sonnet 4.5 <noreply@anthropic.com>\nEOF\n\\)\")"
+    ]
+  }
+}
